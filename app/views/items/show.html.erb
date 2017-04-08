@@ -1,3 +1,10 @@
-<h1><%= @item.title %></h1>
-<p><%= @item.notes %></p>
-<p><%= link_to 'Back to list', items_path %></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1><%= @item.title %></h1>
+            <p><%= @item.notes %></p>
+            <p><%= link_to 'Back to list', items_path, class: 'btn btn-large btn-primary' %></p>
+        </div>
+    </div>
+</div>
+
