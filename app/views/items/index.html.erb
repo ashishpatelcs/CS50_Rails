@@ -1,23 +1,33 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-6">
-            <h1>Listing To Do Items</h1>
+        <div class="col-md-6 col-md-offset-3">
+            <h1>To-do List</h1>
     
             <%= link_to 'New Item', new_item_path, class: 'btn btn-large btn-primary' %>
             
-            <table>
-                <tr>
-                    <td>Title</td>
-                    <td>Notes</td>
-                </tr>
+            <div class="row">
                 
-                <% @items.each do |item| %>
-                <tr>
-                    <td><%= item.title %></td>
-                    <td><%= item.notes %></td>
-                </tr>
-                <% end %>
-            </table>
+                <div class="col-md-4">
+                    <h3>Title</h3>
+                    <% @items.each do |item| %>
+                    <p><%= item.title %></p>
+                    <% end %>
+                </div>
+                
+                <div class="col-md-4">
+                    <h3>Notes</h3>
+                    <% @items.each do |item| %>
+                    <p><%= item.notes %></p>
+                    <% end %>
+                </div>
+                
+                <div class="col-md-4">
+                    <h3>Created At</h3>
+                    <% @items.each do |item| %>
+                    <p><%= item.created_at %></p>
+                    <% end %>
+                </div>
+            </div>
         </div>
     </div>
 </div>
