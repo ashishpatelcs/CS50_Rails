@@ -1,0 +1,17 @@
+<h1>Listing To Do Items</h1>
+
+<%= link_to 'New Item', new_item_path %>
+
+<table>
+    <tr>
+        <td>Title</td>
+        <td>Notes</td>
+    </tr>
+    
+    <% @items.each do |item| %>
+    <tr>
+        <td><%= item.title %></td>
+        <td><%= item.notes %></td>
+    </tr>
+    <% end %>
+</table>
