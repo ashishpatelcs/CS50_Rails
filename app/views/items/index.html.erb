@@ -1,17 +1,23 @@
-<h1>Listing To Do Items</h1>
-
-<%= link_to 'New Item', new_item_path %>
-
-<table>
-    <tr>
-        <td>Title</td>
-        <td>Notes</td>
-    </tr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-6">
+            <h1>Listing To Do Items</h1>
     
-    <% @items.each do |item| %>
-    <tr>
-        <td><%= item.title %></td>
-        <td><%= item.notes %></td>
-    </tr>
-    <% end %>
-</table>
+            <%= link_to 'New Item', new_item_path, class: 'btn btn-large btn-primary' %>
+            
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td>Notes</td>
+                </tr>
+                
+                <% @items.each do |item| %>
+                <tr>
+                    <td><%= item.title %></td>
+                    <td><%= item.notes %></td>
+                </tr>
+                <% end %>
+            </table>
+        </div>
+    </div>
+</div>
